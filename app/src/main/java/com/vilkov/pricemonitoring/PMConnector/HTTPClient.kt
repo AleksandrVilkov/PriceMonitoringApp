@@ -47,7 +47,7 @@ class HTTPClient : APIConnector {
     }
 
     private fun getStringParams(params: Map<String, String>): String {
-        var reqParams: String = "?"
+        var reqParams = "?"
         var countAppliedParams = 0
         for(param in params) {
             var reqParam =
