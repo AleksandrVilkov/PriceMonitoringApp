@@ -1,6 +1,10 @@
 package com.vilkov.pricemonitoring.Model
 
+import com.vilkov.pricemonitoring.Model.Entities.User
+
 interface APIConnector {
-    fun sendGetRequest(url: String): String
-    fun sendPostRequest(url: String, params: Map<String, String>): String
+    fun getObjects(cls: Any, user: User): List<Any>
+    fun deleteObjects(objects: List<Any>, user: User): Boolean
+    fun  createObjects(objects: List<Any>, user: User): Boolean
+    fun updateObjects(objects: List<Any>, user: User): Boolean
 }
